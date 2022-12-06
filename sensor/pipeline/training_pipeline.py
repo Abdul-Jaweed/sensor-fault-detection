@@ -7,14 +7,15 @@ from sensor.logger import logging
 class TrainPipeline:
     
     def __init__(self):
-        self.training_pipeline_config = TrainingPipelineConfig()
+        training_pipeline_config = TrainingPipelineConfig()
         self.data_ingestion_config = DataIngestionConfig(training_pipeline_config=training_pipeline_config)
         self.training_pipeline_config=training_pipeline_config
         
         
     def start_data_ingestion(self)->DataIngestionArtifact:
         try:
-            pass
+            logging.info("Starting data ingestion")
+            logging.info("Data ingestion completed")
         except Exception as e:
             raise SensorException(e,sys)
         
