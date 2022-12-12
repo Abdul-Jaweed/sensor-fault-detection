@@ -26,6 +26,7 @@ class DataTransformation:
     def __init__(self,data_validation_artifact: DataValidationArtifact, 
                     data_transformation_config: DataTransformationConfig,):
         """
+
         :param data_validation_artifact: Output reference of data ingestion artifact stage
         :param data_transformation_config: configuration for data transformation
         """
@@ -113,4 +114,5 @@ class DataTransformation:
             logging.info(f"Data transformation artifact: {data_transformation_artifact}")
             return data_transformation_artifact
         except Exception as e:
-            raise SensorException(e, sys) from 
+            raise SensorException(e, sys) from e
+
